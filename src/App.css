@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  background-color: #f7fafc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input {
+  color: #4a5568;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: .3rem;
+  padding: .5rem 1rem;
+  margin: 0 .5rem 1rem 0;
+  font-size: 1rem;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+input:focus,
+button:focus{
+  outline: 0;
+  border-color: #1abc9c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  color: #fff;
+  background-color: #1abc9c;
+  border: none;
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  border-radius: .2rem;
+  cursor: pointer;
+}
+
+.fruta {
+  background-color: #fff;
+  color: #4a5568;
+  margin-top: 1rem;
+  border-radius: .4rem;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12) , 0 1px 2px rgba(0, 0, 0, .24);
+  width: 100%;
+  transition: all .1s;
+  position: relative;
+}
+
+.fruta:hover,
+.fruta:focus {
+  outline: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, .16) , 0 3px 6px rgba(0, 0, 0, .24);
+}
+
+.fruta ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.fruta ul li strong {
+  color: #1abc9c;
+}
+
+.fruta button {
+  position: absolute;
+  top: 1rem;
+  right: .5rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  border-radius: .2rem;
+  background-color: #da5552;
+  transition: all .2s ease;
+}
+
+.fruta button:focus,
+.fruta button:hover{
+  background-color: #ad2e24;
+  box-shadow: 0 0 0 .2rem rgba(173, 46, 36, .2);
+}
+
+.invalid-feedback {
+ margin-top: 0;
+  width: 100%;
+  font-size: .8rem;
+  color: #dc3545;
 }
